@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Araneus\Interfaces;
 
-interface Executable
+interface ParserInterface
 {
-    public function execute() : void;
+    public function parse();
 }
