@@ -41,7 +41,7 @@ class DocumentContent implements ContentInterface
     /**
      * @throws \Exception
      */
-    private function getXmlElement(): ?\SimpleXMLElement
+    private function getXmlElement()
     {
         $xmlStr = $this->getUnzippedXmlString();
         $xmlElement = null;
