@@ -94,4 +94,20 @@ class FileParser implements ParserInterface
     {
         // TODO: Implement parse() method.
     }
+
+    /**
+     * @return array
+     */
+    public function getCoreUnpackers(): array
+    {
+        return $this->coreUnpackers;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCoreContents(): array
+    {
+        return $this->coreContents;
+    }
 }
