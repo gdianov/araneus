@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace Araneus\Content;
 
-use Araneus\File\DocumentFile;
+use Araneus\File\FileDocument;
 use Araneus\Interfaces\ContentInterface;
 
 class DocumentContent implements ContentInterface
 {
     /**
-     * @var DocumentFile
+     * @var FileDocument
      */
     private $file;
 
     /**
      * DocumentContent constructor.
-     * @param DocumentFile $file
+     * @param FileDocument $file
      */
-    public function __construct(DocumentFile $file)
+    public function __construct(FileDocument $file)
     {
         $this->file = $file;
     }
@@ -27,7 +27,7 @@ class DocumentContent implements ContentInterface
      * @return string
      * @throws \Exception
      */
-    public function getText(): string
+    public function getContent(): string
     {
         $rawContent = '';
         $xmlElement = $this->getXmlElement();

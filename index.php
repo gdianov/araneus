@@ -1,27 +1,19 @@
 <?php
 
+require_once 'vendor/autoload.php';
 
-function findUniqueValue($data) {
-    $cnt = [];
-    foreach ($data AS $item) {
-        if (isset($cnt[$item])) {
-            $cnt[$item] += 1;
-        } else {
-            $cnt[$item] = 1;
-        }
+$parser = new \Araneus\Parsers\FileParser(
+    new \Araneus\File\FilePlainText(__DIR__ . '/demo.txt')
+);
+
+$parser->attachRules(new class extends \Araneus\Rules\BaseRule implements \Araneus\Interfaces\RuleInterface
+{
+    public function getPattern(): string
+    {
+        return '~(\d)+~';
     }
+});
 
-    foreach ($cnt as $key => $value) {
-        if ($value == 1) {
-            return $key;
-        }
-    }
-
-    return $cnt;
-}
-
-
-$data = [5, 5, 1, 7, 1];
-
-var_dump(findUniqueValue($data));
-
+$result = $parser->parse()->fetch();
+var_dump($result);
+//$result = $parser->parse()->loaded();

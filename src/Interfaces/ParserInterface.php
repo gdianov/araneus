@@ -7,4 +7,6 @@ namespace Araneus\Interfaces;
 interface ParserInterface
 {
     public function parse();
+
+    public function fetch();
 }

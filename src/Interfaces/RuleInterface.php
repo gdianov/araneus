@@ -8,5 +8,7 @@ interface RuleInterface
 {
     public function getPattern() : string;
 
-    public function getFileName() : string;
+    public function setMatches(array $matches) : void;
+
+    public function getMatches() : array;
 }

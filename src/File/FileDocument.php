@@ -5,7 +5,7 @@ namespace Araneus\File;
 use Araneus\Content\DocumentContent;
 use Araneus\Interfaces\ContentInterface;
 
-class DocumentFile extends File
+class FileDocument extends File
 {
     /**
      * @return string
@@ -18,7 +18,7 @@ class DocumentFile extends File
     /**
      * @return ContentInterface
      */
-    public function getContent(): ContentInterface
+    public function getSourceContent(): ContentInterface
     {
         return new DocumentContent($this);
     }

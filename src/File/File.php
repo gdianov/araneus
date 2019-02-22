@@ -2,9 +2,9 @@
 
 namespace Araneus\File;
 
-use Araneus\Interfaces\ContentInterface;
+use Araneus\Interfaces\SourceInterface;
 
-abstract class File
+abstract class File implements SourceInterface
 {
     use FileTrait;
 
@@ -101,8 +101,5 @@ abstract class File
         }
     }
 
-    abstract public function getContent(): ContentInterface;
-
     abstract public function getSupportedExtension() : string;
-
 }
