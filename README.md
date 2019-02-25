@@ -3,6 +3,7 @@ Araneus
 #### Araneus is php library for flexible parsing of data from different sources
 **Supported Sources:** `docx, txt, http resources`
 - The minimum required PHP version >= PHP 7.0.
+> For install use command: composer require gdianov/araneus
 ### How to use?
 
 1. Create Rule
