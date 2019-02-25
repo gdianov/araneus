@@ -1,13 +1,17 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Araneus\File;
 
 use Araneus\Interfaces\SourceInterface;
 
+/**
+ * Class File
+ * @package Araneus\File
+ */
 abstract class File implements SourceInterface
 {
-    use FileTrait;
-
     /**
      * @var string
      */
@@ -90,7 +94,7 @@ abstract class File implements SourceInterface
     /**
      * @throws \Exception
      */
-    public function verify()
+    public function validate()
     {
         if (!file_exists($this->pathFile)) {
             throw new \Exception("File {$this->pathFile} does not exist");

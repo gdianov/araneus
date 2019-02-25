@@ -1,10 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Araneus\File;
 
 use Araneus\Content\DocumentContent;
 use Araneus\Interfaces\ContentInterface;
 
+/**
+ * Class FileDocument
+ * @package Araneus\File
+ */
 class FileDocument extends File
 {
     /**

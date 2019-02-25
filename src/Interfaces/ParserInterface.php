@@ -4,9 +4,24 @@ declare(strict_types=1);
 
 namespace Araneus\Interfaces;
 
+/**
+ * Interface ParserInterface
+ * @package Araneus\Interfaces
+ */
 interface ParserInterface
 {
-    public function parse();
+    /**
+     * @return mixed
+     */
+    public function run();
 
-    public function fetch();
+    /**
+     * @return array
+     */
+    public function fetch() : array;
+
+    /**
+     * @return array
+     */
+    public function fetchRules(): array;
 }

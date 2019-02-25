@@ -7,6 +7,10 @@ namespace Araneus\Content;
 use Araneus\File\FileDocument;
 use Araneus\Interfaces\ContentInterface;
 
+/**
+ * Class DocumentContent
+ * @package Araneus\Content
+ */
 class DocumentContent implements ContentInterface
 {
     /**
