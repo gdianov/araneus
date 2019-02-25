@@ -1,8 +1,8 @@
 {
   "name": "gdianov/araneus",
   "type": "library",
-  "description": "Araneus is a PHP micro framework that helps you quickly parse data from different sources",
-  "keywords": ["framework","micro","parse"],
+  "description": "Araneus is php library for flexible parsing of data from different sources",
+  "keywords": ["parsing","docx", "txt", "http","parse"],
   "license": "MIT",
   "authors": [
     {
