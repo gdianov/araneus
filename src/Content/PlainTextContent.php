@@ -33,9 +33,8 @@ class PlainTextContent implements ContentInterface
         if (is_readable($filePath)) {
             $fp = fopen($filePath, "rb");
             $content = fread($fp, filesize($filePath));
+            fclose($fp);
         }
-
-        fclose($fp);
 
         return $content;
     }
